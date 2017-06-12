@@ -1,0 +1,9 @@
+import rmi.test.server.ISay;
+import rmi.test.server.imp.Say;
+
+public class Main {
+	public Main() {
+		// TODO Auto-generated constructor stub
+		ISay sub  = new Say();
+	}
+}

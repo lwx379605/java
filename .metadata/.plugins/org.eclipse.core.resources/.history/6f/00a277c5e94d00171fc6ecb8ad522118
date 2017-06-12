@@ -1,0 +1,8 @@
+package rmi.test.server;
+
+import java.io.Serializable;
+import java.rmi.Remote;
+
+public interface ISay extends Remote,Serializable{
+	public String say(String name);
+}

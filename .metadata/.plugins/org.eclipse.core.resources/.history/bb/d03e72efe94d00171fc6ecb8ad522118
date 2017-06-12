@@ -1,0 +1,8 @@
+package rmi.test.client;
+
+public class Snippet {
+	public static void main(String[] args) {
+		getInstant
+	}
+}
+

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<servers>
+  <server hostname="localhost" id="TOMCAT1" isPublishing="true" name="TOMCAT1" port="8080" runtime-id="TOMCAT1" server-type="org.eclipse.wst.server.http.server" server-type-id="org.eclipse.wst.server.http.server" start-timeout="240" stop-timeout="240" timestamp="1" urlPrefix=""/>
+</servers>

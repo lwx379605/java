@@ -1,0 +1,7 @@
+package rmi.test.server;
+
+import java.rmi.Remote;
+
+public interface ISay extends Remote{
+	public String say(String name);
+}

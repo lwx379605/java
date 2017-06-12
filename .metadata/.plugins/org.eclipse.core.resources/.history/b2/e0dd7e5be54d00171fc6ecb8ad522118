@@ -1,0 +1,14 @@
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
+
+import rmi.test.client.ISay;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Registry reg = LocateRegistry.getRegistry();
+		ISay cli = (ISay)reg.lookup("rmi://localhost:8888/sub");
+	}
+
+}

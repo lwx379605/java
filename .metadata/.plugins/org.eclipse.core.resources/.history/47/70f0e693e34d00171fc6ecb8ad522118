@@ -1,0 +1,21 @@
+import java.rmi.RemoteException;
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
+
+import rmi.test.server.ISay;
+import rmi.test.server.imp.Say;
+
+public class Main {
+	public Main() {
+		// TODO Auto-generated constructor stub
+		ISay sub  = new Say();
+		Registry reg = null;
+		try {
+			Registry reg = LocateRegistry.createRegistry(8888);
+		} catch (RemoteException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+}

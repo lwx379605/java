@@ -1,0 +1,43 @@
+import java.io.IOException;
+import java.rmi.AlreadyBoundException;
+import java.rmi.RemoteException;
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
+
+import rmi.test.server.ISay;
+import rmi.test.server.imp.Say;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated constructor stub
+		ISay sub=null;
+		System.setProperty("java.security.policy",Main.class.getResource("") );
+		try {
+			sub = new Say();
+		} catch (RemoteException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		Registry reg = null;
+		try
+		{
+			System.setSecurityManager(new SecurityManager());
+			reg = LocateRegistry.createRegistry(8888);
+			reg.bind("rmi://localhost:8888/sub", sub);
+			System.in.read();
+		} 
+		catch (RemoteException e) 
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (AlreadyBoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+}

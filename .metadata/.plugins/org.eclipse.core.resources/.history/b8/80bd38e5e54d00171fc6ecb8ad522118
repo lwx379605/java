@@ -1,0 +1,28 @@
+import java.rmi.NotBoundException;
+import java.rmi.RemoteException;
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
+
+import rmi.test.client.ISay;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Registry reg;
+		try {
+			reg = LocateRegistry.getRegistry("localhost", 8888) 
+			ISay cli = (ISay)reg.lookup("rmi://localhost:8888/sub");
+			cli.say("limincheng");
+		} catch (RemoteException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (NotBoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+	}
+
+}

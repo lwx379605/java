@@ -1,0 +1,7 @@
+package rmi.test.server.imp;
+
+import rmi.test.server.ISay;
+
+public class Say implements ISay{
+
+}

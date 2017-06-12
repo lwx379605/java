@@ -1,0 +1,13 @@
+package rmi.test.server.imp;
+
+import rmi.test.server.ISay;
+
+public class Say extends UnicastRemoteObject implements ISay{
+
+	@Override
+	public String say(String name){
+		System.out.println("hello! "+name);
+		return "hello! "+name;
+	}
+
+}

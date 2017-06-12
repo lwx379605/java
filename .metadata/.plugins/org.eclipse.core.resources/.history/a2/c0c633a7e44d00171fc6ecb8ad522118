@@ -1,0 +1,29 @@
+import java.rmi.AlreadyBoundException;
+import java.rmi.RemoteException;
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
+
+import rmi.test.server.ISay;
+import rmi.test.server.imp.Say;
+
+public class Main {
+	public Main() {
+		// TODO Auto-generated constructor stub
+		ISay sub  = new Say();
+		Registry reg = null;
+		try
+		{
+			reg = LocateRegistry.createRegistry(8888);
+			reg.bind("rmi://localhost:8888/sub", sub);
+		} 
+		catch (RemoteException e) 
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (AlreadyBoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+}

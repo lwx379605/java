@@ -1,0 +1,5 @@
+package rmi.test.server.imp;
+
+public class Say {
+
+}

@@ -1,0 +1,13 @@
+package rmi.test.server.imp;
+
+import rmi.test.server.ISay;
+
+public class Say implements ISay{
+
+	@Override
+public String say(String name){
+		
+		return "hello! "+name;
+	}
+
+}
